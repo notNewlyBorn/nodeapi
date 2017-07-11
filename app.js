@@ -1,12 +1,17 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const app = express();
 
+const usersRouter = require('./api/users')
+
+// middlewears
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser())
+
+app.use('/api/v1/users', usersRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
