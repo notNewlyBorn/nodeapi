@@ -5,4 +5,8 @@ module.exports = {
     client: 'pg',
     connection: 'postgresql://localhost/testapidb'
   },
+  test: {
+    client: 'pg',
+    connection: 'postgresql://localhost/test-testapidb'
+  },
 };
