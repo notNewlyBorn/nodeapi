@@ -13,7 +13,7 @@ app.use(cookieParser())
 
 app.use('/api/v1/users', usersRouter)
 
-// catch 404 and forward to error handler
+// catch 404 and forward to error handler. some dummy text
 app.use(function (req, res, next) {
   var err = new Error('Not Found')
   err.status = 404
